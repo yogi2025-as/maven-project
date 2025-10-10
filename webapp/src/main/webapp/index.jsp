@@ -34,7 +34,7 @@
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    const fontSize = 16;
+    const fontSize = 18;
     const columns = Math.floor(canvas.width / fontSize);
     const drops = Array(columns).fill(1);
 
