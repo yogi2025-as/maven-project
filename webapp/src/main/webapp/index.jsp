@@ -1,124 +1,181 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Land Rover Luxury SUVs</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background: #0a222e; color: #e5e5e5; }
-        header { background: #1b2d36; padding: 30px 20px; text-align: center; }
-        header h1 { font-size: 2.5em; color: #9bc850; margin:0; }
-        nav { background: #15212b; display: flex; justify-content: center; padding: 10px 0; }
-        nav a { color: #fafafa; margin: 0 25px; text-decoration: none; font-weight: 500; }
-        nav a:hover { color: #9bc850; }
-        .content { max-width:1200px; margin:40px auto; padding:20px; }
-        .section { margin-bottom:40px; }
-        .flex-cards { display:flex; flex-wrap: wrap; gap:30px; justify-content: center; }
-        .card { background: #223643; border-radius: 14px; width:320px; box-shadow:0 8px 32px rgba(40,80,80,0.14); overflow:hidden; transition:transform 0.2s; }
-        .card:hover { transform:scale(1.04); }
-        .card img { width:100%; height:170px; object-fit:cover; }
-        .card-body { padding:18px; }
-        .card-title { font-size:1.25em; margin-bottom:10px; color: #9bc850; }
-        .card-text { font-size:1em; margin-bottom:14px; }
-        .btn { background: #9bc850; color: #0a222e; padding:10px 24px; border:none; border-radius:7px; font-weight:600; cursor:pointer; text-decoration:none; }
-        .btn:hover { background: #75a800; }
-        footer { background:#1b2d36; text-align:center; padding:18px 5px; margin-top:36px; font-size:0.9em; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Studio Yūgen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: #fafaf6;
+      color: #20202A;
+    }
+    header {
+      text-align: center;
+      padding: 58px 0 16px 0;
+    }
+    header h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #4F6F52;
+      letter-spacing: 1.2px;
+    }
+    header p {
+      color: #585858;
+      font-size: 1.25em;
+      margin-bottom: 32px;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #4F6F52;
+      font-weight: 500;
+      font-size: 1em;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.18s;
+      padding-bottom: 2px;
+    }
+    nav a:hover {
+      border-bottom: 2px solid #4F6F52;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+    section {
+      margin: 42px 0 38px 0;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 1.25em;
+      color: #4F6F52;
+      margin-bottom: 14px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff;
+      box-shadow: 0 4px 28px 0 rgba(78,111,82,0.10);
+      border-radius: 16px;
+      min-width: 220px;
+      max-width: 260px;
+      padding: 32px 18px;
+      margin-bottom: 18px;
+      text-align: left;
+      transition: box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .card:hover {
+      box-shadow: 0 8px 38px 0 rgba(78,111,82,0.17);
+      transform: scale(1.04);
+    }
+    .card-title {
+      font-size: 1.10em;
+      color: #4F6F52;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .card-desc {
+      color: #282834;
+      font-size: 1em;
+      line-height: 1.7;
+      margin-bottom: 5px;
+    }
+    footer {
+      margin-top: 70px;
+      padding: 34px 0 18px 0;
+      color: #888;
+      text-align: center;
+      font-size: 1em;
+      background: #fafaf6;
+      border-top: 1px solid #e0e0db;
+    }
+    @media (max-width:700px) {
+      main { max-width: 100%; }
+      .cards { flex-direction: column; align-items: center; }
+      .card { max-width: 340px; }
+      header h1 { font-size: 2em; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Land Rover Luxury SUVs</h1>
-        <p>Discover Range Rover, Defender, and Discovery. Explore innovative features and luxury design.</p>
-    </header>
+  <header>
+    <h1>Studio Yūgen</h1>
+    <p>Embracing simplicity in creativity—discover design with depth and beauty.</p>
     <nav>
-        <a href="#models">Models</a>
-        <a href="#features">Features</a>
-        <a href="#configure">Configure</a>
-        <a href="#contact">Contact</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#values">Values</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="content">
-
-        <div class="section" id="models">
-            <h2>Our Models</h2>
-            <div class="flex-cards">
-                <div class="card">
-                    <img src="https://www.landrover.in/images/range-rover.jpg" alt="Range Rover">
-                    <div class="card-body">
-                        <div class="card-title">Range Rover</div>
-                        <div class="card-text">Modern luxury SUV with breathtaking design, available in standard and long wheelbase. Explore electrified options.</div>
-                        <a class="btn" href="#configure">Explore</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://www.landrover.in/images/discovery.jpg" alt="Discovery">
-                    <div class="card-body">
-                        <div class="card-title">Discovery</div>
-                        <div class="card-text">Versatile family SUV with seating for up to 7 and advanced terrain response systems.</div>
-                        <a class="btn" href="#configure">Explore</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://www.landrover.in/images/defender.jpg" alt="Defender">
-                    <div class="card-body">
-                        <div class="card-title">Defender</div>
-                        <div class="card-text">Durable, go-anywhere 4x4 reimagined for 2025 with luxury finishes. Available in multiple body styles.</div>
-                        <a class="btn" href="#configure">Explore</a>
-                    </div>
-                </div>
-            </div>
+  </header>
+  <main>
+    <section id="work">
+      <h2>Featured Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Minimal Gallery</div>
+          <div class="card-desc">Curated digital collections of minimal art and design for inspiration.</div>
         </div>
-
-        <div class="section" id="features">
-            <h2>Key Features</h2>
-            <ul>
-                <li>Pivi Pro infotainment: 13.1" touchscreen, wireless smartphone support</li>
-                <li>5G Wi-Fi hotspot and remote connectivity via InControl app</li>
-                <li>Electrified powertrains and sustainable luxury interiors</li>
-                <li>360° surround camera, lane keep assist, adaptive speed limiter</li>
-                <li>Custom driver profiles and cloud-based navigation updates</li>
-            </ul>
+        <div class="card">
+          <div class="card-title">Mizu Concept</div>
+          <div class="card-desc">Branding and UI for a zen tea company focused on mindfulness and tranquility.</div>
         </div>
-
-        <div class="section" id="configure">
-            <h2>Build Your Own Land Rover</h2>
-            <form>
-                <label for="model">Select Model:</label>
-                <select id="model" name="model">
-                    <option>Range Rover</option>
-                    <option>Discovery</option>
-                    <option>Defender</option>
-                </select>
-                <br><br>
-                <label for="color">Exterior Color:</label>
-                <select id="color" name="color">
-                    <option>Black</option>
-                    <option>White</option>
-                    <option>Metallic Green</option>
-                    <option>Grey</option>
-                </select>
-                <br><br>
-                <label for="features">Select Feature:</label>
-                <select id="features" name="features">
-                    <option>Pivi Pro Infotainment</option>
-                    <option>Hybrid Engine</option>
-                    <option>7-Seater</option>
-                    <option>Panoramic Roof</option>
-                </select>
-                <br><br>
-                <button class="btn" type="submit">Show Configuration</button>
-            </form>
+        <div class="card">
+          <div class="card-title">Whisper App</div>
+          <div class="card-desc">A journal app with a serene, decluttered interface that supports healthy habits.</div>
         </div>
-
-        <div class="section" id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:info@landrover.in">info@landrover.in</a><br>
-               Call: 1800-xxxx-xxxx<br>
-               Visit our retail partners for more details.</p>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Yūgen is a design studio based in Bengaluru, India. Inspired by Japanese minimalism, our mission is to create digital experiences that feel as calm as they are beautiful.
+      </p>
+    </section>
+    <section id="values">
+      <h2>What We Value</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Serenity</div>
+          <div class="card-desc">Digital calm through intentional choices in colors, layout, and typography.</div>
         </div>
-
-    </div>
-    <footer>
-        &copy; 2025 Land Rover Inspired Demo | Luxury By Design
-    </footer>
+        <div class="card">
+          <div class="card-title">Functionality</div>
+          <div class="card-desc">Every pixel serves a purpose. No clutter, no distractions—just clarity.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Depth</div>
+          <div class="card-desc">We find sophistication in simplicity, letting subtle details bring delight.</div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: hello@yugen.studio<br>Location: Bengaluru, India<br>Instagram: @studioyugen</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Studio Yūgen. Minimal, Elegant, Timeless.
+  </footer>
 </body>
 </html>
