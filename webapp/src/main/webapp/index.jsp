@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Abu Sufiyan - Portfolio</title>
+    <title>Yogi - Portfolio</title>
     <style>
         /* CSS styles as in original HTML */
         * {
